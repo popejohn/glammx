@@ -1,0 +1,150 @@
+.display-container{
+    height: 550px;
+    margin-top: 65px;
+    color: white;
+    text-shadow: 0px 0px 8px 2px black;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300px;
+    font-style: normal;
+}
+.container-nav{
+    margin: 0 5%;
+}
+
+.navlinks:hover, .navlinks:focus{
+    background-color: #d75103;
+}
+.another-font{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300px;
+    font-style: normal;
+}
+.container-categories{
+    margin: 50px 5%;
+}
+.display-container video{
+    height: 550px;
+}
+.glowing{
+    color: #f8620b;
+}
+.glow:hover{
+    color: #d75103;
+}
+.overlay{
+    background-color: rgba(30, 29, 29, 0.778);
+}
+.left, .right{
+    height: 550px;
+    width: 100%;
+}
+.left{
+    background-color: #ec6168;
+}
+.right{
+    background-color: #f87d82;
+}
+.second-p{
+    margin-top: -15px;
+}
+
+.button-background{
+    background-color: #F2F2F2;
+}
+.product-container{
+    margin: 100px 5% 0;
+}
+
+.orange{
+    color: #f8620b;
+}
+.small-font{
+    font-size: small;
+    width: 80% !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.product-details{
+    width: 100% !important;
+}
+.scroll-container {
+    gap: 5%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    scroll-behavior: smooth;
+  }
+
+  .thescroll{
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    scroll-behavior: smooth;
+  }
+  .favorite{
+    top: 0;
+    left: 0;
+  }
+  
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+
+  .adverts-posters{
+    background-color: rgb(242, 219, 249);
+  }
+
+  .advert-image{
+    width: 80%;
+  }
+
+.inputstyle{
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid rgb(181, 179, 179);
+    outline: none;
+    padding: 2px 5px;
+    margin-top: -8px;
+}
+.addfav{
+    background-color: #d75103 !important;
+    color: white !important;
+}
+.form{
+    box-shadow: 0 0 2px 2px rgb(237, 235, 235);
+}
+  
+
+
+
+/* Keyframes */
+
+@media  (max-width: 975px) {
+    .logo-name{
+        display: none;
+    }
+    .menu{
+        display: block !important;
+    }
+    .thenav{
+        display: none;
+    }
+    .view-container{
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width: 500px) {
+.first-p, .second-p{
+    display: none !important;
+}
+.form{
+    width: 98vw !important;
+    box-shadow: 0 0 0 0 white !important;
+    border: none !important
+}
+}

@@ -1,0 +1,7 @@
+.glow:hover{
+    color: rgb(71, 70, 70) !important;
+}
+
+.navbar-z{
+    z-index: 1000 !important;
+}

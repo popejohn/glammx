@@ -1,0 +1,32 @@
+.category-icons-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .category-box {
+    align-items: center;
+    background-color: #f9f9f9;
+    width: fit-content;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .category-box:hover {
+    background-color: #f8620b;
+    color: white;
+  }
+  
+  .category-box span {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
