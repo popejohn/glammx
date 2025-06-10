@@ -14,7 +14,7 @@ const Viewproduct = ({products}) => {
     
     const navigate = useNavigate()
     useEffect(() => {
-      axios.get(`https://glammx-ecommerce-frontend.onrender.com/viewproduct/${params}`)
+      axios.get(`https://glammx-ecommerce-backend.onrender.com/viewproduct/${params}`)
         .then((res) => {
             setProduct(res.data.product)
             

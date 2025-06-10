@@ -50,7 +50,7 @@ const Adminsignin = ({}) => {
     }),
     onSubmit: (value) => {
         setadminload(true)
-      axios.post("https://glammx-ecommerce-frontend.onrender.com/admin/signin", value)
+      axios.post("https://glammx-ecommerce-backend.onrender.com/admin/signin", value)
       .then((res) => {
         localStorage.setItem('admin-token', res.data.adminToken)
         setTimeout(() => {

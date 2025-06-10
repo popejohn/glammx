@@ -18,7 +18,7 @@ const Mycart = ({cartItems, setCartItems, user}) => {
 
     const checkOutStack = () => {
        
-        axios.post('https://glammx-ecommerce-frontend.onrender.com/checkout', {cartItems}, {
+        axios.post('https://glammx-ecommerce-backend.onrender.com/checkout', {cartItems}, {
             headers:{
                 'Authorization': `Bearer ${token}`
             }

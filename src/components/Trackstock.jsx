@@ -9,7 +9,7 @@ const CategoryStockChart = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("https://glammx-ecommerce-frontend.onrender.com/categorychart")
+    axios.get("https://glammx-ecommerce-backend.onrender.com/categorychart")
       .then(res => {
         const formatted = res.data.map(item => ({
           category: item._id,

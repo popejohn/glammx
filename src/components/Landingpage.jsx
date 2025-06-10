@@ -32,7 +32,7 @@ const Landingpage = ({products, loggedin, loading, altProducts, allproducts, set
   const fetchuser = async() => {
     if (token) {
       setloggedin(true);
-      await axios.get('https://glammx-ecommerce-frontend.onrender.com/user/verify', {
+      await axios.get('https://glammx-ecommerce-backend.onrender.com/user/verify', {
          headers:{
            'Authorization': `Bearer ${token}`
          }
@@ -52,7 +52,7 @@ const Landingpage = ({products, loggedin, loading, altProducts, allproducts, set
 
     // Get favorite
     useEffect(() => {
-        axios.get('https://glammx-ecommerce-frontend.onrender.com/getfavorites', {
+        axios.get('https://glammx-ecommerce-backend.onrender.com/getfavorites', {
             headers: {
                 'Authorization': `Bearer ${token}`
                 }
@@ -98,7 +98,7 @@ const Landingpage = ({products, loggedin, loading, altProducts, allproducts, set
 
     // Add to favorites
       useEffect(() => {
-        axios.post('https://glammx-ecommerce-frontend.onrender.com/addfavorites', {products: favorites}, {
+        axios.post('https://glammx-ecommerce-backend.onrender.com/addfavorites', {products: favorites}, {
             headers: {
                 'Authorization': `Bearer ${token}`
                 }

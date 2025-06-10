@@ -11,7 +11,7 @@ const Profile = ({loggedin}) => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      axios.get('https://glammx-ecommerce-frontend.onrender.com/user/verify', {
+      axios.get('https://glammx-ecommerce-backend.onrender.com/user/verify', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -30,7 +30,7 @@ const uploadpic = (e) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = async(e) => {
-    await axios.post('https://glammx-ecommerce-frontend.onrender.com/user/uploadimage', {
+    await axios.post('https://glammx-ecommerce-backend.onrender.com/user/uploadimage', {
         profilepic: e.target.result,
         user
       })
@@ -58,7 +58,7 @@ const editProfile = (e) => {
   setEditing(true);
   return
 }
-  axios.post('https://glammx-ecommerce-frontend.onrender.com/user/edit', user)
+  axios.post('https://glammx-ecommerce-backend.onrender.com/user/edit', user)
   .then((res) => {
       alert("Profile updated successfully");
       window.location.reload();

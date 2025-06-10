@@ -58,7 +58,7 @@ const formik = useFormik({
     }),
     onSubmit: (value) => {
         const { password, confirmPassword } = value
-      axios.post('https://glammx-ecommerce-frontend.onrender.com/user/resetpassword', {password, otp})
+      axios.post('https://glammx-ecommerce-backend.onrender.com/user/resetpassword', {password, otp})
       .then((resp) => {
         setload(true)
         toast.success('Password reset successful')

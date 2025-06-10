@@ -14,7 +14,7 @@ const [soldProducts, setSoldProducts] = useState('');
 const [totalStock, setTotalStock] = useState('');
 
   useEffect(() => {
-    axios.get('https://glammx-ecommerce-frontend.onrender.com/displays')
+    axios.get('https://glammx-ecommerce-backend.onrender.com/displays')
     .then((res) => {
       setTotalSales(res.data.totalSold);
       setTotalUsers(res.data.totalUsers);

@@ -21,7 +21,7 @@ const AccountDropdown = ({myuser, login, setloggin, accountName}) => {
   };
 
 const logout =() => {
-  axios.post('https://glammx-ecommerce-frontend.onrender.com/logout', {email: myuser.email})
+  axios.post('https://glammx-ecommerce-backend.onrender.com/logout', {email: myuser.email})
   localStorage.removeItem('token')
   setloggin(false)
   navigate('/user/signin')

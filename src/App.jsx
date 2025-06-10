@@ -58,13 +58,13 @@ function App() {
 
   const shouldShowNavbar = !noNavbarRoutes.some((route) => location.pathname.toLowerCase().startsWith(route));
 
-  const socket = useRef(socketClient('https://glammx-ecommerce-frontend.onrender.com'));
+  const socket = useRef(socketClient('https://glammx-ecommerce-backend.onrender.com'));
 
 
   useEffect(() => {
     setloading(true)
     // Fetch products from backend API
-    axios.get("https://glammx-ecommerce-frontend.onrender.com/allproducts")
+    axios.get("https://glammx-ecommerce-backend.onrender.com/allproducts")
       .then(response => {
         setloading(true)
         const data = response.data;
@@ -104,7 +104,7 @@ useEffect(() => {
             const user_cart = JSON.parse(localStorage.getItem('offline_cart')) || [];
             setCartItems (user_cart);
         }else{
-            axios.get('https://glammx-ecommerce-frontend.onrender.com/getcart',  {
+            axios.get('https://glammx-ecommerce-backend.onrender.com/getcart',  {
                 headers: {
                 'Authorization': `Bearer ${token}`
                 } 
@@ -124,7 +124,7 @@ useEffect(() => {
       
 useEffect(() => {
             if (token) {
-                axios.post('https://glammx-ecommerce-frontend.onrender.com/savecart', cartItems, {
+                axios.post('https://glammx-ecommerce-backend.onrender.com/savecart', cartItems, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                         }

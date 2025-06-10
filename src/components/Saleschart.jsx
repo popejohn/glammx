@@ -8,7 +8,7 @@ const Saleschart = () => {
     const [data, setData] = useState([]);
 
   useEffect(() => {
-  axios.get('https://glammx-ecommerce-frontend.onrender.com/saleschart')
+  axios.get('https://glammx-ecommerce-backend.onrender.com/saleschart')
     .then(res => {
       const chartData = res.data.map(item => ({
         month: `${item._id.year}-${item._id.month.toString().padStart(2, "0")}`,
