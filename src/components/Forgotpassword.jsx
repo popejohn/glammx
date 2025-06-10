@@ -23,7 +23,7 @@ const Forgotpassword = ({loading, setloading}) => {
         onSubmit: (value) => {
           setloading(true)
         setTimeout(() => {
-            axios.post('http://localhost:9000/user/confirmemail', value)
+            axios.post('https://glammx-ecommerce-frontend.onrender.com/user/confirmemail', value)
             .then((res) => {
                 console.log(res);
                 toast.success('Email sent successfully')

@@ -14,7 +14,7 @@ const Favorites = () => {
 
     const [favoriteProducts, setFavoriteProducts] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:9000/user/favorites", {
+        axios.get("https://glammx-ecommerce-frontend.onrender.com/user/favorites", {
             headers: {
                 'Authorization': `Bearer ${token}`
                 }        

@@ -25,7 +25,7 @@ const Editproduct = ({products}) => {
     
 
     const saveEdit = () => {
-        axios.post(`http://localhost:9000/admin/editproduct/${productData._id}`, productData)
+        axios.post(`https://glammx-ecommerce-frontend.onrender.com/admin/editproduct/${productData._id}`, productData)
         .then((res) => {
             setEditing(true)
             toast.success('Product updated successfully')

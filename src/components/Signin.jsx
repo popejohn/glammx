@@ -50,7 +50,7 @@ const Signin = () => {
     }),
     onSubmit: (value) => {
       setloading(true)
-      axios.post('http://localhost:9000/user/login', value)
+      axios.post('https://glammx-ecommerce-frontend.onrender.com/user/login', value)
       .then((res) => {
         setloading(true)
         localStorage.setItem("token", res.data.token)

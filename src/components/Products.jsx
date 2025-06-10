@@ -72,7 +72,7 @@ const Product = ({products}) => {
     }
 
 const deleteProduct = (id) => {
-    axios.post(`http://localhost:9000/admin/deleteproduct/${products[id]._id}`)
+    axios.post(`https://glammx-ecommerce-frontend.onrender.com/admin/deleteproduct/${products[id]._id}`)
     .then((res) => {
         toast.success('Product deleted successfully')
         setTimeout(() => {
@@ -86,7 +86,7 @@ const deleteProduct = (id) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         setUpload(true)
-        axios.post('http://localhost:9000/admin/productupload', productData)
+        axios.post('https://glammx-ecommerce-frontend.onrender.com/admin/productupload', productData)
         .then((res) => {
             toast.success('Product added successfully')
             setProductData({

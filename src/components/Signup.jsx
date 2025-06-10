@@ -23,7 +23,7 @@ const Signup = ({show, show2, setshow2, setshow, load, setLoad}) => {
   
 
   useEffect(() => {
-    axios.get('http://localhost:9000/users')
+    axios.get('https://glammx-ecommerce-frontend.onrender.com/users')
     .then((res) => {
       setallusers(res.data.allUsers)
     })
@@ -84,7 +84,7 @@ const showPassword2 = (input) =>{
               setLoad(false)
             }, 3000);
           }else{
-            axios.post('http://localhost:9000/user/signup', value)
+            axios.post('https://glammx-ecommerce-frontend.onrender.com/user/signup', value)
           .then((res) => {
           toast.success("Sign up successful")
           setLoad(true)
@@ -104,7 +104,7 @@ const showPassword2 = (input) =>{
           
          
       }else{    
-        axios.post('http://localhost:9000/user/signup', value)
+        axios.post('https://glammx-ecommerce-frontend.onrender.com/user/signup', value)
         .then((res) => {
           alert("Sign up successful")
           setLoad(false)

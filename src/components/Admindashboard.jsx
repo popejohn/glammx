@@ -20,7 +20,7 @@ const Admindashboard = () => {
     const token = localStorage.getItem('admin-token')
     const navigate = useNavigate()
   useEffect(() => {
-    axios.get("http://localhost:9000/admin/dashboard", {
+    axios.get("https://glammx-ecommerce-frontend.onrender.com/admin/dashboard", {
       headers:{
         'Authorization': `Bearer ${token}`
       }
