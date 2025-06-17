@@ -37,7 +37,7 @@ const logout =() => {
     >
       <div className="glow d-flex justify-content-center align-items-center gap-2">
         <FaUserCheck />
-        <div><Link className='glow text-dark text-decoration-none fw-semibold fst-italic'>{login ?`Hi ${myuser.firstname}` :"Account"}</Link></div>
+        <div><Link className='glow text-dark text-decoration-none fw-semibold fst-italic'>{myuser.firstname ?`Hi ${myuser.firstname}` :"Account"}</Link></div>
         <FaAngleDown />
       </div>
 

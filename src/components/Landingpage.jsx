@@ -267,7 +267,7 @@ const Landingpage = ({products, loggedin, loading, altProducts, allproducts, set
                 <Footer />
             </div>) :( <div className='bg-light pt-3 px-3 text-info fw-semibold d-flex flex-column justify-content-center align-items-center' style={{minHeight: "99vh"}}>
             <div className="spinner-border text-dark opacity-75" role="status">
-                <span className="visually-hidden">Loading...</span>
+                <span className="text-dark">Loading products...</span>
             </div>
         </div>)
         }
