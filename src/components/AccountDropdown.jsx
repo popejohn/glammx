@@ -23,6 +23,7 @@ const AccountDropdown = ({myuser, login, setloggin, accountName}) => {
 const logout =() => {
   axios.post('https://glammx-ecommerce-backend.onrender.com/logout', {email: myuser.email})
   localStorage.removeItem('token')
+  localStorage.removeItem('offline_cart')
   setloggin(false)
   navigate('/user/signin')
 }
