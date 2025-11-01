@@ -10,7 +10,7 @@ const Footer = () => {
           <h4>PRODUCT</h4>
           <p>Lorem ipsum</p>
           <p>Become a Vendor</p>
-          <Link to={'/glammx/admin'} className='fs-6 text-tertiary fst-itallic'>Admin</Link>
+          <Link to={'/glammx/admin'} className='fs-6 text-secondary text-decoration-none'><span>Admin</span></Link>
         </div>
         <div className="footer-section">
           <h4>EARNINGS</h4>
