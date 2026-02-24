@@ -59,7 +59,7 @@ const [showmenu, setShowmenu] = useState(false)
                     <img src={myuser.profilepic && myuser.profilepic} alt="" className='rounded-circle' style={{width: "40px", height: "40px"}} />
                 </Link>
                 : <>
-                <Link to='/user/signup'><Scalebutton text={"Sign up"} style={"btn btn-dark rounded-2 fw-semibold ms-3"} /></Link>
+                <Link to='/user/signin'><Scalebutton text={"login"} style={"btn btn-dark rounded-2 fw-semibold ms-3"} /></Link>
                 </>
              }
             </div>
