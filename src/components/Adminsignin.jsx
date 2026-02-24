@@ -69,7 +69,7 @@ const Adminsignin = ({}) => {
   return (
     <>
       <div className='w-100 h-100 d-flex flex-column justify-content-start align-items-center py-5'>
-        <form action="" onSubmit={formik.handleSubmit} className='form mt-4 p-4 rounded-3 border border-3'  style={{backgroundColor: "white", width: '450px'}}>
+        <form action="" onSubmit={formik.handleSubmit} className='form mt-4 p-4 rounded-3 border border-3' style={{backgroundColor: "white", width: '600px'}}>
           <h5 className='text-black fw-bold text-center'>Sign in as an Admin</h5>
           <label htmlFor="companyid" className='form-label mt-4 text-muted opacity-75'>Company-ID</label>
           <input type="text" id='companyid' name='companyid' onChange={formik.handleChange} onBlur={formik.handleBlur} className='form-control' />
