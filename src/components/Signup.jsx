@@ -125,7 +125,7 @@ const showPassword2 = (input) =>{
           <img src={glammxlogo} alt="" className='rounded-circle' style={{height: "40px"}} />
           <h4 className='fw-bold opacity-75 text-muted'>Glammx</h4>
         </div>
-        <form action="" onSubmit={formik.handleSubmit} className='form mt-4 p-4 rounded-3 border border-3'  style={{backgroundColor: "white"}}>
+        <form action="" onSubmit={formik.handleSubmit} className='form mt-4 p-4 rounded-3 border border-3'  style={{backgroundColor: "white", width: '450px'}}>
           <h5 className='text-black fw-bold text-center'>Create an Account</h5>
           <label htmlFor="firstname" className='form-label mt-3 text-muted opacity-75'>First name</label>
           <input type="text" id='firstname' name='firstname' onChange={formik.handleChange} onBlur={formik.handleBlur} className='form-control' />

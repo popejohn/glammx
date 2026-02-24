@@ -77,7 +77,7 @@ const Signin = () => {
           <img src={glammxlogo} alt="" className='rounded-circle' style={{height: "40px"}} />
           <h4 className='fw-bold opacity-75 text-muted'>Glammx</h4>
         </div>
-        <form action="" onSubmit={formik.handleSubmit} className='form mt-4 p-4 rounded-3 border border-3'  style={{backgroundColor: "white", width: '480px'}}>
+        <form action="" onSubmit={formik.handleSubmit} className='form mt-4 p-4 rounded-3 border border-3'  style={{backgroundColor: "white", width: '450px'}}>
           <h5 className='text-black fw-bold text-center'>Sign in to your Account</h5>
           <p className='text-center text-muted fw-light fst-italic'>Don't have an account? <Link to={'/user/signup'} className='orange fst-normal fw-semibold'>Sign up</Link></p>
           <label htmlFor="email" className='form-label mt-4 text-muted opacity-75'>Email</label>
