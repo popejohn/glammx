@@ -1,6 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Signup from './components/Signup'
-import Signuppage from './components/Signuppage'
 import axios from 'axios'
 import { useState, useEffect, useRef } from 'react'
 import Landingpage from './components/Landingpage'
@@ -228,7 +227,7 @@ const deleteFromCart = (product) => {
               </>}
       <Routes>
         <Route path='/' element={<Landingpage products={groupedproducts} altProducts = {altallProducts} setAllProducts = {setAllProducts} loading={loading} loggedin={loggedin} setloggedin={setloggedin} userId={myuser} allproducts = {allProducts} setGroupedProducts = {setGroupedProducts} showCart={showCart} setuser={setuser} setShowCart={setShowCart} enlarged={enlarged} setEnlarged={setEnlarged} message={message} setMessage={setMessage} messages={messages} setMessages={setMessages} socket={socket.current} cartItems={cartItems} setCartItems={setCartItems}/>} />
-          <Route path='/user' element={<Signuppage />}>
+          <Route path='/user' element={<Signup />}>
               <Route path='signup' element={<Signup show={show} setshow={setshow} load={load} setLoad={setLoad} show2={show2} setshow2={setshow2} />} />
               <Route path='signin' element={<Signin loading={loading} setloading={setloading} myuser={myuser} setuser={setuser} />} />
               <Route path='forgotpassword' element={<Forgotpassword loading={loading} setloading={setloading} />} />

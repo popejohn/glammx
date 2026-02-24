@@ -119,13 +119,12 @@ const showPassword2 = (input) =>{
 
   
   return (
-    <>
       <div className='w-100 h-100 d-flex flex-column justify-content-start align-items-center py-5'>
         <div className='d-flex justify-content-center align-items-center gap-3 mt-3'>
           <img src={glammxlogo} alt="" className='rounded-circle' style={{height: "40px"}} />
           <h4 className='fw-bold opacity-75 text-muted'>Glammx</h4>
         </div>
-        <form action="" onSubmit={formik.handleSubmit} className='form mt-4 p-4 rounded-3 border border-3'  style={{backgroundColor: "white", width: '450px'}}>
+        <form action="" onSubmit={formik.handleSubmit} className='form mt-4 p-4 rounded-3 border border-3 w-25'  style={{backgroundColor: "white", width: '450px'}}>
           <h5 className='text-black fw-bold text-center'>Create an Account</h5>
           <label htmlFor="firstname" className='form-label mt-3 text-muted opacity-75'>First name</label>
           <input type="text" id='firstname' name='firstname' onChange={formik.handleChange} onBlur={formik.handleBlur} className='form-control' />
@@ -153,7 +152,6 @@ const showPassword2 = (input) =>{
         </form>
         <ToastContainer position='top-right' />
       </div>
-    </>
   )
 }
 
