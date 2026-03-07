@@ -235,7 +235,7 @@ const deleteFromCart = (product) => {
           </Route>
           <Route path = '/viewproduct/:id' element={<Viewproduct products={allProducts} />} />
           <Route path='/glammx/admin/signin' element={<Adminsignin />} />
-          <Route path='/glammx/admin'>
+          <Route path='/glammx/admin' element={<Admindashboard />}>
               <Route index element={<Dashboard />} />
               <Route path='dashboard' element={<Dashboard />}/>
               <Route path='products' element={<Products products={allProducts} />} />
