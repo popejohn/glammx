@@ -227,30 +227,30 @@ const deleteFromCart = (product) => {
               </>}
       <Routes>
         <Route path='/' element={<Landingpage products={groupedproducts} altProducts = {altallProducts} setAllProducts = {setAllProducts} loading={loading} loggedin={loggedin} setloggedin={setloggedin} userId={myuser} allproducts = {allProducts} setGroupedProducts = {setGroupedProducts} showCart={showCart} setuser={setuser} setShowCart={setShowCart} enlarged={enlarged} setEnlarged={setEnlarged} message={message} setMessage={setMessage} messages={messages} setMessages={setMessages} socket={socket.current} cartItems={cartItems} setCartItems={setCartItems}/>} />
-          <Route path='/user' element={<Signup />}>
-              <Route path='signup' element={<Signup show={show} setshow={setshow} load={load} setLoad={setLoad} show2={show2} setshow2={setshow2} />} />
-              <Route path='signin' element={<Signin loading={loading} setloading={setloading} myuser={myuser} setuser={setuser} />} />
-              <Route path='forgotpassword' element={<Forgotpassword loading={loading} setloading={setloading} />} />
+          <Route path='user'>
+              <Route path='/signup' element={<Signup show={show} setshow={setshow} load={load} setLoad={setLoad} show2={show2} setshow2={setshow2} />} />
+              <Route path='/signin' element={<Signin loading={loading} setloading={setloading} myuser={myuser} setuser={setuser} />} />
+              <Route path='/forgotpassword' element={<Forgotpassword loading={loading} setloading={setloading} />} />
               <Route path= '/user/resetpassword/:otp' element={<Resetpassword load={load} setload={setLoad} />} />
           </Route>
           <Route path = '/viewproduct/:id' element={<Viewproduct products={allProducts} />} />
           <Route path='/glammx/admin/signin' element={<Adminsignin />} />
           <Route path='/glammx/admin' element={<Admindashboard />}>
               <Route index element={<Dashboard />} />
-              <Route path='dashboard' element={<Dashboard />}/>
-              <Route path='products' element={<Products products={allProducts} />} />
-              <Route path = '/glammx/admin/products/edit/:ind' element = {<Editproduct products={allProducts} />} />
-              <Route path='orders' element= {<Myorders />} />
-              <Route path='vendors' element= {<Vendors />} />
-              <Route path='settings' element = {<Settings />} />
-              <Route path = 'support' element = {<SupportDashboard socket = {socket.current} />} />
+              <Route path='/dashboard' element={<Dashboard />}/>
+              <Route path='/products' element={<Products products={allProducts} />} />
+              <Route path = '/products/edit/:ind' element = {<Editproduct products={allProducts} />} />
+              <Route path='/orders' element= {<Myorders />} />
+              <Route path='/vendors' element= {<Vendors />} />
+              <Route path='/settings' element = {<Settings />} />
+              <Route path = '/support' element = {<SupportDashboard socket = {socket.current} />} />
           </Route>
           <Route path='/user/account' element={<Account loggedin={loggedin} setloggedin={setloggedin} myuser={myuser} />}>
               <Route index element={<Profile loggedin={loggedin} setloggedin={setloggedin} />} />
-              <Route path='profile' element={<Profile loggedin={loggedin} setloggedin={setloggedin} />} />
-              <Route path= 'favorites' element= {<Favorites />} />
-              <Route path='cart' element= { <Mycart cartItems={cartItems} setCartItems={ setCartItems } user = {myuser} />} />
-              <Route path='products/:cat' element= {<Productview products={allProducts} />} />
+              <Route path='/profile' element={<Profile loggedin={loggedin} setloggedin={setloggedin} />} />
+              <Route path= '/favorites' element= {<Favorites />} />
+              <Route path='/cart' element= { <Mycart cartItems={cartItems} setCartItems={ setCartItems } user = {myuser} />} />
+              <Route path='/products/:cat' element= {<Productview products={allProducts} />} />
              
           </Route>
           <Route path='/customercare/chat' element= {<Chatpage userId={myuser} enlarged={enlarged} setEnlarged={setEnlarged} message={message} setMessage={setMessage} messages={messages} setMessages={setMessages} socket={socket.current}/>} />
