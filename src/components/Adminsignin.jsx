@@ -54,7 +54,7 @@ const Adminsignin = ({}) => {
       .then((res) => {
         localStorage.setItem('admin-token', res.data.adminToken)
         setTimeout(() => {
-            navigate('/glammx/admin/dashboard')
+            navigate('/glammx/admin')
         }, 2000);
         toast.success('Admin login successful')
         setadminload(false)
@@ -81,7 +81,6 @@ const Adminsignin = ({}) => {
            </div>
           <div className='text-warning fst-italic'><small>{formik.touched.password ?formik.errors.password :""}</small></div>
           <div className='mx-auto'><button disabled={adminload} type='submit' className='rounded-2 btn btn-dark fw-bold px-3 py-2 w-100 my-4'>{adminload ?"loading..." :"Submit"}</button></div>
-          <p className='text-center'><Link to={'/user/forgotpassword'} className='glow text-muted fw-semibold'>Forget password?</Link></p>
         </form>
         <ToastContainer />
       </div>
