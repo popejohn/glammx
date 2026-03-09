@@ -55,22 +55,26 @@ const sendMessage = () => {
  useEffect(() => {
   if (!socket) return;
    socket.on("user_response", (usermessage) =>{
+        console.log('Support received user_response:', usermessage);
         if (usermessage.sender == selectedUser?.email) {
           setMessages((prev) => [...prev, usermessage]);
         }
         
    })
+   return () => socket.off('user_response');
  }, [socket, selectedUser])
 
  // Listen for support responses
  useEffect(() => {
   if (!socket) return;
    socket.on("response", (supportResponse) =>{
+        console.log('Support received response:', supportResponse);
         if (supportResponse.sender === 'support' && supportResponse.recipient === selectedUser?.email) {
           setMessages((prev) => [...prev, supportResponse]);
         }
         
    })
+   return () => socket.off('response');
  }, [socket, selectedUser])
   
 
