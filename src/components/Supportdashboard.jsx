@@ -26,10 +26,18 @@ useEffect(() => {
   const chatSelectedUser = (user) => {
     setSelectedUser(user)
     socket.emit("selected_user", user);
-    socket.on('user_support_chat', (userSupportChats) => {
-      setMessages(userSupportChats);      
-    }) //Works
   }
+
+  // Listen for user support chat history when a user is selected
+  useEffect(() => {
+    if (!socket || !selectedUser) return;
+    socket.on('user_support_chat', (userSupportChats) => {
+      setMessages(userSupportChats);
+    });
+    return () => {
+      socket.off('user_support_chat');
+    };
+  }, [socket, selectedUser]);
 
 // This fnx sends a msg which is a rspns to the user's query
 const sendMessage = () => {

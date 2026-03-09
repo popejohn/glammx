@@ -14,6 +14,29 @@ import { useNavigate } from 'react-router-dom';
 
 const Account = () => {
 
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    axios.post('https://glammx-ecommerce-backend.onrender.com/logout', {})
+      .then(() => {
+        // Clear all user-related localStorage data
+        localStorage.removeItem('token');
+        localStorage.removeItem('offline_cart');
+        localStorage.removeItem('admin-token');
+        localStorage.clear();
+        navigate('/user/signin');
+      })
+      .catch((err) => {
+        console.log(err);
+        // Clear localStorage anyway on error
+        localStorage.removeItem('token');
+        localStorage.removeItem('offline_cart');
+        localStorage.removeItem('admin-token');
+        localStorage.clear();
+        navigate('/user/signin');
+      });
+  }
+
   return (
     <div className="admin-layout mt-5" style={{ display: 'flex', minHeight: '100vh' }}>
       {/* Sidebar */}
@@ -29,7 +52,7 @@ const Account = () => {
             <Link className="navlinks py-2 ps-4 text-light text-decoration-none w-100 d-flex align-items-center gap-2" to="favorites" ><MdOutlineFavorite /> My Favorites</Link>
             <Link className="navlinks py-2 ps-4 text-light text-decoration-none w-100 d-flex align-items-center gap-2" to="cart" ><BiSolidPurchaseTagAlt />My cart</Link>
             {/* <Link className='navlinks py-2 ps-4 text-light text-decoration-none w-100 d-flex align-items-center gap-2' to='products/:cat'>Products</Link> */}
-            <button className='py-2 ps-4 text-light btn btn-dark text-decoration-none w-100 mt-3 d-flex align-items-center gap-2' to="settings"><IoSettingsSharp />Logout</button>
+            <button className='py-2 ps-4 text-light btn btn-dark text-decoration-none w-100 mt-3 d-flex align-items-center gap-2' onClick={handleLogout}><IoSettingsSharp />Logout</button>
           </div>
         </nav>
         </div>
