@@ -47,6 +47,20 @@ const Chatpage = ({ userId, enlarged, setEnlarged, message, setMessage, messages
     socket.off('response');
   };
     }, [socket, userId])
+
+    // get live user messages
+    useEffect(() => {
+     socket.on('user_response', (usermessage) =>{
+        if (usermessage.sender === userId.email) {
+            setMessages((prev) => [...prev, usermessage])
+        }
+        
+     })
+
+     return () => {
+    socket.off('user_response');
+  };
+    }, [socket, userId])
     
 
     const navigate = useNavigate()
@@ -71,7 +85,6 @@ const sendMessage = () => {
            
             
             socket.emit('send_message', msgData);
-            setMessages((prev) => [...prev, msgData]);
             setMessage('');
         };
     

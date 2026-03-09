@@ -40,7 +40,6 @@ const sendMessage = () => {
       message
     }
     socket.emit("support_response", (supportResponse)); //emits support's response to display live to selected user
-    setMessages(prev => [...prev, supportResponse]); //display the msg on support the screen
     setMessage("");
   }; //Works
 
@@ -48,12 +47,23 @@ const sendMessage = () => {
  useEffect(() => {
   if (!socket) return;
    socket.on("user_response", (usermessage) =>{
-        if (usermessage.sender == selectedUser.email) {
+        if (usermessage.sender == selectedUser?.email) {
           setMessages((prev) => [...prev, usermessage]);
         }
         
    })
- }, [socket, activeusers])
+ }, [socket, selectedUser])
+
+ // Listen for support responses
+ useEffect(() => {
+  if (!socket) return;
+   socket.on("response", (supportResponse) =>{
+        if (supportResponse.sender === 'support' && supportResponse.recipient === selectedUser?.email) {
+          setMessages((prev) => [...prev, supportResponse]);
+        }
+        
+   })
+ }, [socket, selectedUser])
   
 
   useEffect(() => {
